@@ -7,11 +7,9 @@ AEGIS Desktop provides a native, zero-browser user interface built directly for 
 
 ## Key Features
 
-    True Native Application Window: Runs independently on the operating system without spawning local web browser tabs or background server ports.
-
-    Direct In-Memory Inference: Ingests raw network traffic captures (.pcap, .pcapng) or structured datasets (.csv) and passes them directly to the embedded Random Forest classification engine.
-
-    Piano-Black Operator Interface: Features custom dark styling (#000000 canvas, #0a0a0a panels, and #484aaa purple accents) tailored for security operations centers (SOC).
+- True Native Application Window: Runs independently on the operating system without spawning local web browser tabs or background server ports.
+- Direct In-Memory Inference: Ingests raw network traffic captures (.pcap, .pcapng) or structured datasets (.csv) and passes them directly to the embedded Random Forest classification engine.
+- Piano-Black Operator Interface: Features custom dark styling (#000000 canvas, #0a0a0a panels, and #484aaa purple accents) tailored for security operations centers (SOC).
 
 ## Project Structure
 ```
@@ -32,14 +30,18 @@ AEGIS/
 
 To compile AEGIS into a standalone native application binary (.app / executable):
 
-    Install requirements & PyInstaller:
+1. Install requirements & PyInstaller:
+    ```
+    bash 
     pip install customtkinter pandas scikit-learn scapy joblib pyinstaller
 
-    Clean and compile using the spec file:
+3. Clean and compile using the spec file:
+    ```
+    bash
     rm -rf dist build
     pyinstaller aegis.spec --clean
 
-    Locate your binary:
+5. Locate your binary:
     The finished standalone application bundle will be located inside the dist/ folder.
 
 ## Author
